@@ -1,0 +1,19 @@
+{
+  "name": "vue-press-teaching-project",
+  "version": "0.0.1",
+  "description": "vue press demo",
+  "main": "index.js",
+  "authors": {
+    "name": "Terry",
+    "email": "minmin614@gmail.com"
+  },
+  "repository": "/vue-press-teaching-project",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
