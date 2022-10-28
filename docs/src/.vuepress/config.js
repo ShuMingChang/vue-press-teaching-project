@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Vuepress Demo',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -34,12 +34,16 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'MarkDown 簡介',
+        link: '/introductionMarkdown/',
       },
       {
         text: 'Config',
         link: '/config/'
+      },
+      {
+        text: '聊天室',
+        link: '/chat/'
       },
       {
         text: 'VuePress',
@@ -47,9 +51,9 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/guide/': [
+      '/introductionMarkdown/': [
         {
-          title: 'Guide',
+          title: 'MarkDown 簡介',
           collapsable: false,
           children: [
             '',
