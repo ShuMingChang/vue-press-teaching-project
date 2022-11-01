@@ -8,6 +8,7 @@ sidebar: auto
 
 - Type: `string`
 - Default: `/`
+- testtest
 
 ## bar
 
