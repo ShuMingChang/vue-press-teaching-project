@@ -16,7 +16,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#f8b62d' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -32,19 +32,21 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+    logo: '/50.png',
     nav: [
+      {
+        text: 'Jamstack',
+        link: '/jamstack/'
+      },
+      {
+        text: 'Cloudflare Psges',
+        link: '/cloudflarePages/'
+      },
       {
         text: 'MarkDown 簡介',
         link: '/introductionMarkdown/',
       },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: '聊天室',
-        link: '/chat/'
-      },
+      
       {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
@@ -61,6 +63,26 @@ module.exports = {
           ]
         }
       ],
+      '/jamstack/': [
+        {
+          title: 'Jamstack',
+          collapsable: false,
+          children: [
+            '',
+            'CSRvsSSRvsSSG',
+          ]
+        }
+      ],
+      '/cloudflarePages/': [
+        {
+          title: 'Cloudflare Pages',
+          collapsable: false,
+          children: [
+            '',
+            'github-cloudflare-pages-setup',
+          ]
+        }
+      ]
     }
   },
 
@@ -70,5 +92,8 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-  ]
+  ],
+  markdown: {
+    lineNumbers: true
+  }
 }
