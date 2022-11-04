@@ -15,45 +15,45 @@
 
 進入 Cloudflare 的 dashbord 至 pages
 
-建立專案
 
-![create-project](./create-project.png)
 
-連線至Git
+![create-project](./create-project.png "建立專案")
 
-![link-git](./link-git.png)
+![link-git](./link-git.png "連線至Git")
 
-加入帳號
 
-![add-account](./add-account.png)
 
-OAuth認證
+![add-account](./add-account.png "加入帳號")
 
-![git-oauth](./git-oauth.png)
 
-設定permissions， **select repositories** 選擇要部署的專案
 
-![set-permissions](./set-permissions.png)
+![git-oauth](./git-oauth.png "OAuth認證")
 
-選擇存放庫（會亮起來）
 
-![select-repositories](./select-repositories.png)
 
-設定生產分支(這個就是production了)
+![set-permissions](./set-permissions.png "設定permissions，select repositories 選擇要部署的專案")
 
-![main-branch](./main-branch.png)
 
-調整組建設定
-- Framework 選對應的
-- 組建命令就是打包指令
-- 輸出目錄
-- 還有根目錄 vuepress 預設根目錄是 docs
+
+![select-repositories](./select-repositories.png "選擇存放庫（會亮起來）")
+
+
+
+![main-branch](./main-branch.png "設定生產分支(這個就是production了)")
+
+
  
-![build-settings](./build-settings.png)
+![build-settings](./build-settings.png "調整組建設定")
+::: tip
+- Framework預設：Framework 選對應的
+- 組建命令：就是打包指令
+- 組建輸出目錄：build後輸出目錄
+- 根目錄：vuepress 預設根目錄是 docs
+:::
 
-接下來服務就會自動部署了
+<br>
 
-![process](./process.png)
+![process](./process.png "接下來服務就會自動部署了")
 
 ## Step 3 檢查成果
 

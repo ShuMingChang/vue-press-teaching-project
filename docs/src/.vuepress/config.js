@@ -59,7 +59,8 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'markdown-syntax',
+            'PULL_REQUEST_TEMPLATE'
           ]
         }
       ],
@@ -94,6 +95,12 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
   ],
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    extendMarkdown: md => {
+      md.use(require('markdown-it-imsize'));
+      md.use(require('markdown-it-image-figures'), {
+        figcaption: true
+      });
+    }
   }
 }
