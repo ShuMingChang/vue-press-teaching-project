@@ -86,12 +86,12 @@ vscode 有裝 [Markdown All in One](https://marketplace.visualstudio.com/items?i
 
 ### 程式碼區塊
 
-我們可以用 ```` ``` ````包圍區塊
+我們可以用 ```` ``` ````包圍區塊，並且在後方加入語法種類，例如：md->markdown、js->javascript、vue->vuejs、html->HTML tags...等等。
 
 **輸入**
 
-````md
-```vue
+```` md
+``` vue
 <template>
   <Block :block="block">
     <ColorArea backgroundColor="ff0000">
@@ -107,7 +107,7 @@ vscode 有裝 [Markdown All in One](https://marketplace.visualstudio.com/items?i
 
 **輸出**
 
-```vue
+``` vue
 <template>
   <Block :block="block">
     <ColorArea backgroundColor="ff0000">
@@ -119,3 +119,132 @@ vscode 有裝 [Markdown All in One](https://marketplace.visualstudio.com/items?i
   </Block>
 </template>
 ```
+
+還可以**強調**某幾行程式碼區塊
+
+**輸入**
+
+```` md
+``` js{1,4,6-7}
+export default { // Highlighted
+  data () {
+    return {
+      msg: `Highlighted!
+      This line isn't highlighted,
+      but this and the next 2 are.`,
+      motd: 'VuePress is awesome',
+      lorem: 'ipsum',
+    }
+  }
+}
+```
+````
+
+**輸出**
+
+``` js{1,4,6-7}
+export default { // Highlighted
+  data () {
+    return {
+      msg: `Highlighted!
+      This line isn't highlighted,
+      but this and the next 2 are.`,
+      motd: 'VuePress is awesome',
+      lorem: 'ipsum',
+    }
+  }
+}
+```
+
+### 提示區塊
+
+**輸入**
+
+```` md
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
+
+::: danger STOP <!-- 自定義標題 -->
+Danger zone, do not proceed
+:::
+
+::: details Click me to view the code <!-- 自定義標題 -->
+```js
+console.log('Hello, VuePress!')
+```
+:::
+````
+
+**輸出**
+
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
+
+::: danger STOP <!-- 自定義標題 -->
+Danger zone, do not proceed
+:::
+
+::: details Click me to view the code <!-- 自定義標題 -->
+```js
+console.log('Hello, VuePress!')
+```
+:::
+
+### 徽章 <Badge text="警告" type="warning"/> <Badge text="預設" vertical="middle"/>
+
+- **Props**：
+  - `text` - string
+  - `type` - string, 選項： `"tip"|"warning"|"error"`，預設值： `"tip"`
+  - `vertical` - string, 選項： `"top"|"middle"`，預設值： `"top"`
+
+**輸入**
+
+``` md
+### 徽章 <Badge text="警告" type="warning"/> <Badge text="預設" vertical="middle"/>
+```
+
+### 清單
+
+必須要先安裝擴充 [**markdown-it-task-lists**](https://www.npmjs.com/package/markdown-it-task-lists)
+
+**輸入**
+
+``` md
+- [x] I have performed a self-review of my code
+- [ ] If it is a core feature, I have added thorough tests.
+- [ ] Do we need to implement analytics?
+- [ ] Will this be part of a product update? If yes, please write one phrase about this update.
+```
+
+**輸出**
+
+- [x] I have performed a self-review of my code
+- [ ] If it is a core feature, I have added thorough tests.
+- [ ] Do we need to implement analytics?
+- [ ] Will this be part of a product update? If yes, please write one phrase about 

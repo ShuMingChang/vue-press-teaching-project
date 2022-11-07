@@ -46,7 +46,10 @@ module.exports = {
         text: 'MarkDown 簡介',
         link: '/introductionMarkdown/',
       },
-      
+      {
+        text: '筆記小工具',
+        link: '/tools/',
+      },
       {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
@@ -97,6 +100,7 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     extendMarkdown: md => {
+      md.use(require('markdown-it-task-lists'));
       md.use(require('markdown-it-imsize'));
       md.use(require('markdown-it-image-figures'), {
         figcaption: true
