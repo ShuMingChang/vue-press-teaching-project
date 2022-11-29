@@ -6,7 +6,7 @@ actionText: Quick Start →
 actionLink: /jamstack/
 features:
 - title: Jamstack
-  details: 果醬的魔術 🤥
+  details: 果醬的魔術 🤥🤥🤥🤥
 - title: Cloudflare Pages
   details: 團隊協作好朋友
 - title: Markdown
