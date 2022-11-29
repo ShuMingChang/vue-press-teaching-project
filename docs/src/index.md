@@ -11,5 +11,5 @@ features:
   details: 團隊協作好朋友
 - title: Markdown
   details: 工程師的文件表示法
-footer: Made by Terry with ❤️🤥❤️❤️
+footer: Made by Terry with ❤️🤥
 ---
