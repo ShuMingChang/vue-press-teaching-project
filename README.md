@@ -1,7 +1,7 @@
 # vue-press-teaching-project
 
 此專案是用來介紹vuepress相關內容的筆記
-哪容關鍵字如下：
+內容關鍵字如下：
 - Jamstack
 - Cloudflare Pages
 - Markdown
